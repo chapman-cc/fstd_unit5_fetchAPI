@@ -9,7 +9,7 @@ class Gallery {
     }
     appendToGallery() {
         this.people.forEach(person => {
-            const div = person.generateCard();
+            const div = person.generateCardDiv();
             this.gallery.appendChild(div)
         })
     }

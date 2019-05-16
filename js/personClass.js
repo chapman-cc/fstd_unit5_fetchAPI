@@ -14,7 +14,7 @@ class Person {
         this.registered = person.registered;
     }
     
-    generateCard() {
+    generateCardDiv() {
         const div = document.createElement("div");
         div.className = "card";
         div.innerHTML = `
