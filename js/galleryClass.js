@@ -1,6 +1,6 @@
 class Gallery {
     constructor() {
-        this.gallery = document.querySelector("#gallery"); 
+        this.galleryDOM = document.querySelector("#gallery"); 
         this.people = [];
     }
     
@@ -10,7 +10,9 @@ class Gallery {
     appendToGallery() {
         this.people.forEach(person => {
             const div = person.generateCardDiv();
-            this.gallery.appendChild(div)
+            this.galleryDOM.appendChild(div)
         })
     }
+
+
 }
