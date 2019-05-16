@@ -13,8 +13,18 @@ class Person {
         this.picture = person.picture;
         this.registered = person.registered;
     }
+    get fullAddress() {
+        return `${this.location.street}, ${this.location.state}, ${this.location.postcode}`
+    }
     
-    generateCardDiv() {
+    get fullName () {
+        return `${this.name.first} ${this.name.last}`
+    }
+    
+    get birthDate() {
+        const bd = this.dob.date;
+        bd.slice(0, 10).replace(/^(\d{4})-(\d{2})-(\d{2})/g, "$2/$3/$1")
+    }
         const div = document.createElement("div");
         div.className = "card";
         div.innerHTML = `
