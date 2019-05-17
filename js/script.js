@@ -6,5 +6,5 @@ const gallery = new Gallery();
 fetch(randUserAPI)
     .then(res => res.json())
     .then(data => gallery.addPeople(data))
-    .then(() => gallery.appendToGallery())
+    .then(() => gallery.appendPeopleCard())
     .catch(err => console.log(Error(err)))
