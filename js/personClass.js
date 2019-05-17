@@ -37,6 +37,7 @@ class Person {
     generateCardDiv()  {
         const div = document.createElement("div");
         div.className = "card";
+        div.dataset.index = this.index
         div.innerHTML = `
         <div class="card-img-container">
         <img class="card-img" src="${this.picture.medium}" alt="profile picture">
