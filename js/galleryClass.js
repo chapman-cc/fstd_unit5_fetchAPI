@@ -11,13 +11,14 @@ class Gallery {
         this.galleryDom.insertAdjacentElement("afterend", div);
     }
     
-    addPeople(json) {
+    
+    storePeopleInfo(json) {
         json.results.forEach((person, index) => this.people.push(new Person(person, index)))
     }
 
     appendPeopleCard() {
         this.people.forEach(person => {
-            const div = person.generateCardDiv();
+            const div = person.generateCards();
             this.galleryDom.appendChild(div)
         })
     }

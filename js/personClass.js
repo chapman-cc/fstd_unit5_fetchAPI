@@ -34,7 +34,7 @@ class Person {
         const bd = this.dob.date;
         bd.slice(0, 10).replace(/^(\d{4})-(\d{2})-(\d{2})/g, "$2/$3/$1")
     }
-    generateCardDiv()  {
+    generateCards()  {
         const div = document.createElement("div");
         div.className = "card";
         div.dataset.index = this.index
@@ -50,7 +50,7 @@ class Person {
         return div;
     }
     
-    generateModalDiv() {
+    generateModalInfo() {
         return `
             <div class="modal">
                 <button type="button" id="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
