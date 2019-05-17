@@ -14,10 +14,8 @@ class Modal {
     modalControls(e) {
         const targetID = e.target.id;
         if (targetID === "modal-next") {
-            console.log("next")
             this.showNextModal();
         } else if (targetID === "modal-prev") {
-            console.log("prev")
             this.showPrevModal();
         } else if (targetID === "modal-close-btn" || e.target.tagName === "STRONG") {
             this.closeModal();
