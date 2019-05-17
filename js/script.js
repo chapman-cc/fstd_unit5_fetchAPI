@@ -17,3 +17,16 @@ gallery.galleryDom.addEventListener("click", e => {
     if (!e.target.classList.contains("gallery"))
         gallery.showModal(e)        
 })
+
+gallery.modalDom.addEventListener("click", e => {
+    const targetID = e.target.id;
+    if (targetID === "modal-prev") {
+        gallery.showPrevModal();
+    } else if (targetID === "modal-next") {
+        gallery.showNextModal();
+    } else if (targetID === "modal-close-btn" || e.target.tagName === "STRONG") {
+        gallery.closeModal();
+    } else {
+        return;
+    }
+}) 
