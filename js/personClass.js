@@ -1,5 +1,6 @@
 class Person {
-    constructor(person) {
+    constructor(person, index) {
+        this.index = index;
         for (const key in person) {
             this[key] = person[key] //TODO lookup how to deconstruct object
         }

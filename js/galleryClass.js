@@ -12,8 +12,9 @@ class Gallery {
     }
     
     addPeople(json) {
-        json.results.forEach(person => this.people.push(new Person(person)))
+        json.results.forEach((person, index) => this.people.push(new Person(person, index)))
     }
+
     appendPeopleCard() {
         this.people.forEach(person => {
             const div = person.generateCardDiv();
