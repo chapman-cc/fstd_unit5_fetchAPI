@@ -23,10 +23,20 @@ class Gallery {
         })
     }
 
-    appendModal(html) {
-        // const modalContainer = document.querySelector("#modal-container");
-        this.modalDom.innerHTML = html;
-        this.modalDom.classList.add("modal-container")
+    insertModalContainer() {
+        const html = `
+        <div class="modal-container" hidden>
+            <div class="modal">
+                <button type="button" id="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
+                <div class="modal-info-container">
+                </div>
+            </div>
+            <div class="modal-btn-container">
+            <button type="button" id="modal-prev" class="modal-prev btn">Prev</button>
+            <button type="button" id="modal-next" class="modal-next btn">Next</button>
+            </div>
+        </div>`
+        this.galleryDom.insertAdjacentHTML("afterend", html);
     }
 
     showModal(e) {
