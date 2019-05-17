@@ -1,5 +1,8 @@
 const randUserAPI = "https://randomuser.me/api/?results=12";
 const gallery = new Gallery();
+const searchBar = new SearchBar();
+
+searchBar.appendSearchBar();
 
 //----------------------------------------
 // Store and append rangalleryDom user to galleryDom //TODO edit comment
