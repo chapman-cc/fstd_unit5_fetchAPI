@@ -1,6 +1,6 @@
 class Gallery {
     constructor() {
-        this.galleryDom = document.querySelector("#gallery"); 
+        this.galContainer = document.querySelector("#gallery"); 
         this.people = [];
     }
 
@@ -13,7 +13,7 @@ class Gallery {
     appendPeopleCard() {
         this.people.forEach(person => {
             const div = person.generateCards();
-            this.galleryDom.appendChild(div)
+            this.galContainer.appendChild(div)
         })
     }
 
@@ -30,7 +30,7 @@ class Gallery {
             <button type="button" id="modal-next" class="modal-next btn">Next</button>
             </div>
         </div>`
-        this.galleryDom.insertAdjacentHTML("afterend", html);
+        this.galContainer.insertAdjacentHTML("afterend", html);
     }
 
     showModal(e) {

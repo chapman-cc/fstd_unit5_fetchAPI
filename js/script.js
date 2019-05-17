@@ -1,10 +1,8 @@
 const randUserAPI = "https://randomuser.me/api/?results=12";
 const gallery = new Gallery();
-// const modal = new Modal();
 
-// modal.insertModalContainer()
 //----------------------------------------
-// Store and append rangalleryDom user to galleryDom
+// Store and append rangalleryDom user to galleryDom //TODO edit comment
 fetch(randUserAPI)
     .then(res => res.json())
     .then(data => gallery.storePeopleInfo(data))
@@ -15,6 +13,4 @@ fetch(randUserAPI)
 //----------------------------------------
 // Open modal event listener
 
-gallery.galleryDom.addEventListener("click", e => gallery.showModal(e))
-
-// gallery.modalDom.addEventListener("click", gallery.modalControl) 
+gallery.galContainer.addEventListener("click", e => gallery.showModal(e))
