@@ -1,6 +1,8 @@
 const randUserAPI = "https://randomuser.me/api/?results=12";
 const gallery = new Gallery();
+// const modal = new Modal();
 
+// modal.insertModalContainer()
 //----------------------------------------
 // Store and append rangalleryDom user to galleryDom
 fetch(randUserAPI)
@@ -15,15 +17,4 @@ fetch(randUserAPI)
 
 gallery.galleryDom.addEventListener("click", e => gallery.showModal(e))
 
-gallery.modalDom.addEventListener("click", e => {
-    const targetID = e.target.id;
-    if (targetID === "modal-prev") {
-        gallery.showPrevModal();
-    } else if (targetID === "modal-next") {
-        gallery.showNextModal();
-    } else if (targetID === "modal-close-btn" || e.target.tagName === "STRONG") {
-        gallery.closeModal();
-    } else {
-        return;
-    }
-}) 
+// gallery.modalDom.addEventListener("click", gallery.modalControl) 
