@@ -11,6 +11,8 @@ class Gallery {
     }
 
     appendPeopleCards(array) {
+        const peopel = this.people || array;
+        peopel.forEach(person => {
             const div = person.generateCards();
             this.galContainer.appendChild(div)
         })
