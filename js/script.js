@@ -9,3 +9,8 @@ fetch(randUserAPI)
     .then(() => gallery.appendPeopleCard())
     .then(() => gallery.insertModalContainer())
     .catch(err => console.log(Error(err)))
+
+//----------------------------------------
+// Open modal event listener
+
+gallery.galleryDom.addEventListener("click", e => {
