@@ -40,13 +40,11 @@ class Gallery {
     }
 
     showModal(e) {
-        const card = e.target.closest(".card");
-        const index = card.dataset.index;
-        const html = this.people[index].generateModalDiv(); 
-        this.appendModal(html);
+        if (!e.target.classList.contains("gallery")) {
+            const i = e.target.closest(".card").dataset.index;
+            const modal = new Modal(this.people[i]);
+            modal.infoContainer.innerHTML = modal.person.generateModalInfo();
+            modal.container.hidden = false;
+        }
     }
-    
-
-
-
 }

@@ -13,10 +13,7 @@ fetch(randUserAPI)
 //----------------------------------------
 // Open modal event listener
 
-gallery.galleryDom.addEventListener("click", e => {
-    if (!e.target.classList.contains("gallery"))
-        gallery.showModal(e)        
-})
+gallery.galleryDom.addEventListener("click", e => gallery.showModal(e))
 
 gallery.modalDom.addEventListener("click", e => {
     const targetID = e.target.id;
