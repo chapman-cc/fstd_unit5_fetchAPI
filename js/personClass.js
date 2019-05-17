@@ -62,7 +62,7 @@ class Person {
                     <hr>
                     <p class="modal-text">${this.cell}</p>
                     <p class="modal-text">${this.fullAddress}</p>
-                    <p class="modal-text">Birthday: this.birthDate</p>
+                    <p class="modal-text">Birthday: ${this.birthDate}</p>
                 </div>
             </div>
 
