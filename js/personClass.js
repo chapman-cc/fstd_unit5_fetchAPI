@@ -1,17 +1,25 @@
 class Person {
     constructor(person) {
-        this.cell = person.cell;
-        this.dob = person.dob;
-        this.email = person.email;
-        this.gender = person.gender;
-        this.id = person.id;
-        this.location = person.location;
-        this.login = person.login;
-        this.name = person.name;
-        this.nat = person.nat;
-        this.phone = person.phone;
-        this.picture = person.picture;
-        this.registered = person.registered;
+        for (const key in person) {
+            this[key] = person[key] //TODO lookup how to deconstruct object
+        }
+
+        /**
+         * ! Deprecated
+         * this.cell = person.cell;
+         * this.dob = person.dob;
+         * this.email = person.email;s
+         * this.gender = person.gender;
+         * this.id = person.id;
+         * this.location = person.location;
+         * this.login = person.login;
+         * this.name = person.name;
+         * this.nat = person.nat;
+         * this.phone = person.phone;
+         * this.picture = person.picture;
+         * this.registered = person.registered;
+         */
+        
     }
     get fullAddress() {
         return `${this.location.street}, ${this.location.state}, ${this.location.postcode}`
