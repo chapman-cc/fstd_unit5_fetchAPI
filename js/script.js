@@ -14,3 +14,5 @@ fetch(randUserAPI)
 // Open modal event listener
 
 gallery.galleryDom.addEventListener("click", e => {
+    if (!e.target.classList.contains("gallery"))
+})
