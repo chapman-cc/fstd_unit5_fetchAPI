@@ -9,9 +9,9 @@ searchBar.appendSearchBar();
 fetch(randUserAPI)
     .then(res => res.json())
     .then(data => gallery.storePeopleInfo(data))
-    .then(() => gallery.appendPeopleCard())
+    .then(() => gallery.appendPeopleCards())
     .then(() => gallery.insertModalContainer())
-    .catch(err => console.log(Error(err)))
+    .catch(err => console.log(Error(err)));
 
 //----------------------------------------
 // Open modal event listener
