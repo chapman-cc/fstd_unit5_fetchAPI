@@ -1,9 +1,9 @@
-const randUserAPI = "https://randomuser.me/api/";
-const randUserMulti = "?results=12"
-
+const randUserAPI = "https://randomuser.me/api/?results=12";
 const gallery = new Gallery();
 
-fetch(randUserAPI + randUserMulti)
+//----------------------------------------
+// Store and append rangalleryDom user to galleryDom
+fetch(randUserAPI)
     .then(res => res.json())
     .then(data => gallery.addPeople(data))
     .then(() => gallery.appendToGallery())
