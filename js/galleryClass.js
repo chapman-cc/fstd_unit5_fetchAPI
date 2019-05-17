@@ -3,7 +3,7 @@ class Gallery {
         this.galleryDom = document.querySelector("#gallery"); 
         this.people = [];
     }
-    
+
     insertModalContainer() {
         const div = document.createElement("div");
         div.id = "modal-container";
@@ -21,6 +21,21 @@ class Gallery {
             this.galleryDom.appendChild(div)
         })
     }
+
+    appendModal(html) {
+        // const modalContainer = document.querySelector("#modal-container");
+        this.modalDom.innerHTML = html;
+        this.modalDom.classList.add("modal-container")
+    }
+
+    showModal(e) {
+        const card = e.target.closest(".card");
+        const index = card.dataset.index;
+        const html = this.people[index].generateModalDiv(); 
+        this.appendModal(html);
+    }
+    
+
 
 
 }

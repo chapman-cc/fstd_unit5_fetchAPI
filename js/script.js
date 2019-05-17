@@ -15,4 +15,5 @@ fetch(randUserAPI)
 
 gallery.galleryDom.addEventListener("click", e => {
     if (!e.target.classList.contains("gallery"))
+        gallery.showModal(e)        
 })
