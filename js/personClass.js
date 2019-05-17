@@ -26,7 +26,7 @@ class Person {
         return `${this.location.street}, ${this.location.state}, ${this.location.postcode}`
     }
 
-    get fullName () {
+    get fullname () {
         return `${this.name.first} ${this.name.last}`
     }
     
@@ -43,7 +43,7 @@ class Person {
         <img class="card-img" src="${this.picture.medium}" alt="profile picture">
         </div>
         <div class="card-info-container">
-        <h3 id="name" class="card-name cap">${this.fullName}</h3>
+        <h3 id="name" class="card-name cap">${this.fullname}</h3>
         <p class="card-text">${this.email}</p>
         <p class="card-text cap">${this.location.city}, ${this.location.state}</p>
         </div>`
@@ -53,7 +53,7 @@ class Person {
     generateModalInfo() {
         return `
             <img class="modal-img" src="${this.picture.large}" alt="profile picture">
-            <h3 id="name" class="modal-name cap">${this.fullName}</h3>
+            <h3 id="name" class="modal-name cap">${this.fullname}</h3>
             <p class="modal-text">${this.email}</p>
             <p class="modal-text cap">${this.location.city}</p>
             <hr>
