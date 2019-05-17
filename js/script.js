@@ -14,6 +14,9 @@ fetch(randUserAPI)
     .catch(err => console.log(Error(err)));
 
 //----------------------------------------
-// Open modal event listener
+// Event istener
 
-gallery.galContainer.addEventListener("click", e => gallery.showModal(e))
+gallery.galContainer.addEventListener("click", e => gallery.showModal(e));
+
+searchBar.container.addEventListener("keyup", e => searchBar.search(e));
+searchBar.container.addEventListener("submit", e => searchBar.search(e));
