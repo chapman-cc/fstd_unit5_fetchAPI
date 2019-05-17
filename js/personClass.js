@@ -51,9 +51,7 @@ class Person {
     }
     
     generateModalDiv() {
-        const div = document.createElement("div");
-        div.className = "modal-container";
-        div.innerHTML = `
+        return `
             <div class="modal">
                 <button type="button" id="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
                 <div class="modal-info-container">
@@ -72,6 +70,5 @@ class Person {
                 <button type="button" id="modal-prev" class="modal-prev btn">Prev</button>
                 <button type="button" id="modal-next" class="modal-next btn">Next</button>
             </div>`
-        return div
     }
 }
