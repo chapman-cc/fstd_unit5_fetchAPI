@@ -52,23 +52,14 @@ class Person {
     
     generateModalInfo() {
         return `
-            <div class="modal">
-                <button type="button" id="modal-close-btn" class="modal-close-btn"><strong>X</strong></button>
-                <div class="modal-info-container">
-                    <img class="modal-img" src="${this.picture.large}" alt="profile picture">
-                    <h3 id="name" class="modal-name cap">${this.fullName}</h3>
-                    <p class="modal-text">${this.email}</p>
-                    <p class="modal-text cap">${this.location.city}</p>
-                    <hr>
-                    <p class="modal-text">${this.cell}</p>
-                    <p class="modal-text">${this.fullAddress}</p>
-                    <p class="modal-text">Birthday: ${this.birthDate}</p>
-                </div>
-            </div>
-
-            <div class="modal-btn-container">
-                <button type="button" id="modal-prev" class="modal-prev btn">Prev</button>
-                <button type="button" id="modal-next" class="modal-next btn">Next</button>
-            </div>`
+            <img class="modal-img" src="${this.picture.large}" alt="profile picture">
+            <h3 id="name" class="modal-name cap">${this.fullName}</h3>
+            <p class="modal-text">${this.email}</p>
+            <p class="modal-text cap">${this.location.city}</p>
+            <hr>
+            <p class="modal-text">${this.cell}</p>
+            <p class="modal-text">${this.fullAddress}</p>
+            <p class="modal-text">Birthday: ${this.birthDate}</p>
+            `              
     }
 }
