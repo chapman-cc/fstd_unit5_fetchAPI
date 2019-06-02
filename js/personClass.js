@@ -58,7 +58,7 @@ class Person {
             <p class="modal-text cap">${this.location.city}</p>
             <hr>
             <p class="modal-text">${this.cell}</p>
-            <p class="modal-text">${this.fullAddress}</p>
+            <p class="modal-text cap">${this.fullAddress}</p>
             <p class="modal-text">Birthday: ${this.birthDate}</p>
             `
     }
