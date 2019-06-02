@@ -32,7 +32,7 @@ class Person {
     
     get birthDate() {
         const bd = this.dob.date;
-        bd.slice(0, 10).replace(/^(\d{4})-(\d{2})-(\d{2})/g, "$2/$3/$1")
+        return bd.slice(0, 10).replace(/^(\d{4})-(\d{2})-(\d{2})/g, "$2/$3/$1")
     }
     generateCards()  {
         const div = document.createElement("div");
@@ -60,6 +60,6 @@ class Person {
             <p class="modal-text">${this.cell}</p>
             <p class="modal-text">${this.fullAddress}</p>
             <p class="modal-text">Birthday: ${this.birthDate}</p>
-            `              
+            `
     }
 }
