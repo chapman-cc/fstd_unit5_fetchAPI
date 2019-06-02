@@ -8,8 +8,6 @@ class Modal {
         this.container.addEventListener("click", e => this.modalControls(e)) //? is it a good idea to add event listener here?
     }
 
-    
-    
 
     modalControls(e) {
         const targetID = e.target.id;

@@ -5,7 +5,7 @@ const searchBar = new SearchBar();
 searchBar.appendSearchBar();
 
 //----------------------------------------
-// Store and append rangalleryDom user to galleryDom //TODO edit comment
+// Store and append rangalleryDom user to galleryDom 
 fetch(randUserAPI)
     .then(res => res.json())
     .then(data => gallery.storePeopleInfo(data))
@@ -17,6 +17,5 @@ fetch(randUserAPI)
 // Event istener
 
 gallery.galContainer.addEventListener("click", e => gallery.showModal(e));
-
 searchBar.container.addEventListener("keyup", e => searchBar.search(e));
 searchBar.container.addEventListener("submit", e => searchBar.search(e));
