@@ -1,4 +1,3 @@
-"# fstd_unit5_fetchAPI" 
 # Javascript Fetch API  
 ### Project 5 from TeamTreehouse FSTD 
 
